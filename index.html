@@ -33,6 +33,7 @@
     }
     .btn.secondary { background: #0077b6; }
     .btn.call { background: #28a745; }
+    .btn.sms { background: #f59e0b; }
     .section {
       background: white;
       margin: 20px auto;
@@ -40,6 +41,14 @@
       border-radius: 12px;
       max-width: 800px;
       text-align: left;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
     }
     iframe {
       width: 100%;
@@ -113,15 +122,14 @@
 
     <h3>♻️ Durabilité & Circularité des vêtements</h3>
     <p><strong>La durabilité</strong> consiste à concevoir et utiliser des vêtements qui durent plus longtemps, 
-    avec moins d’impact sur l’environnement (matières plus responsables, réduction des déchets, consommation raisonnée).</p>
+    avec moins d’impact sur l’environnement.</p>
 
-    <p><strong>La circularité</strong> signifie que les vêtements ne sont pas jetés après usage, mais réutilisés, réparés, recyclés 
-    ou transformés afin de prolonger leur cycle de vie.</p>
+    <p><strong>La circularité</strong> signifie que les vêtements sont réutilisés, réparés ou recyclés.</p>
 
     <ul>
-      <li>Favoriser la réparation plutôt que le remplacement</li>
+      <li>Favoriser la réparation</li>
       <li>Encourager le recyclage textile</li>
-      <li>Limiter le gaspillage et la surconsommation</li>
+      <li>Limiter le gaspillage</li>
       <li>Participer à une mode plus responsable</li>
     </ul>
   </div>
@@ -154,9 +162,16 @@
       <li>Ne pas utiliser les ascenseurs</li>
       <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
       <li>Se diriger au point de rassemblement afin de faire l’appel</li>
-      <li>Si besoin,en cas d'urgence ou de danger :</li>
+      <li>Si besoin, en cas d'urgence ou de danger :</li>
     </ul>
     <a class="btn call" href="tel:+33633669863">📞 Appeler le 06 33 66 98 63</a>
+  </div>
+
+  <div class="section">
+    <h2>✅ Confirmation de lecture des consignes</h2>
+    <p>Merci d’indiquer le nom de votre entreprise avant de confirmer :</p>
+    <input type="text" id="entreprise" placeholder="Nom de l’entreprise" required>
+    <a href="#" class="btn sms" onclick="envoyerSMS()">📩 J’ai lu les consignes</a>
   </div>
 </div>
 
@@ -170,6 +185,16 @@
     document.getElementById('collaborateur').classList.add('hidden');
     document.getElementById('visiteur').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
+  }
+
+  function envoyerSMS() {
+    var entreprise = document.getElementById("entreprise").value.trim();
+    if (entreprise === "") {
+      alert("Merci de renseigner le nom de votre entreprise avant l’envoi.");
+      return;
+    }
+    var message = encodeURIComponent("Bonjour, l’entreprise " + entreprise + " confirme avoir lu et pris connaissance des consignes sécurité EHS 206 Primark.");
+    window.location.href = "sms:+33633669863?body=" + message;
   }
 </script>
 
