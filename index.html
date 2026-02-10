@@ -30,9 +30,11 @@
       border-radius: 12px;
       font-size: 18px;
       font-weight: bold;
+      cursor: pointer;
     }
     .btn.secondary { background: #0077b6; }
     .btn.call { background: #28a745; }
+    .btn.sms { background: #f77f00; }
     .section {
       background: white;
       margin: 20px auto;
@@ -52,11 +54,13 @@
       font-size: 14px;
     }
     input {
-      padding: 10px;
-      width: 90%;
-      max-width: 400px;
+      width: 100%;
+      padding: 12px;
       border-radius: 8px;
       border: 1px solid #ccc;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -68,94 +72,66 @@
 </header>
 
 <div class="container" id="home">
-  <a href="#" class="btn" onclick="showSection('collaborateur')">Je suis un collaborateur Primark</a>
-  <a href="#" class="btn secondary" onclick="showSection('visiteur')">Je suis un intervenant externe ou un visiteur</a>
+  <a class="btn" onclick="showSection('collaborateur')">Je suis un collaborateur Primark</a>
+  <a class="btn secondary" onclick="showSection('visiteur')">Je suis un intervenant externe ou un visiteur</a>
 </div>
 
-<!-- COLLABORATEURS -->
 <div class="container hidden" id="collaborateur">
-  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
+  <a class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
   <div class="section">
     <h2>🔥 Incendie – Consignes d’évacuation</h2>
     <ul>
-      <li>Au déclenchement de l’alarme, évacuer immédiatement</li>
+      <li>Au retentissement de l’alarme évacuation</li>
       <li>Se diriger vers l’issue de secours la plus proche</li>
       <li>Ne pas utiliser les ascenseurs</li>
-      <li>Ne pas retourner aux vestiaires</li>
-      <li>Se rendre au point de rassemblement</li>
+      <li>Ne pas retourner chercher ses affaires</li>
+      <li>Se diriger vers le point de rassemblement</li>
     </ul>
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPXNAgp7nOqMcne68Oi3Minz" allowfullscreen></iframe>
   </div>
 
   <div class="section">
     <h2>🤸 Échauffement du matin</h2>
-    <ul>
-      <li>Réduit le risque de blessure</li>
-      <li>Prépare le corps à l’effort</li>
-      <li>Améliore la concentration</li>
-      <li>Diminue les douleurs musculaires</li>
-      <li>Favorise la bonne humeur</li>
-    </ul>
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX" allowfullscreen></iframe>
   </div>
 
   <div class="section">
     <h2>🧍 Gestes & Postures</h2>
-    <p>Prévenir les TMS et accidents.</p>
     <iframe src="https://www.youtube.com/embed/4hE3gMf88V4" allowfullscreen></iframe>
-  </div>
-
-  <div class="section">
-    <h2>🌍 Environnement & RSE</h2>
-    <ul>
-      <li>Tri des déchets</li>
-      <li>Économies d’énergie</li>
-      <li>Réduction du gaspillage</li>
-    </ul>
-    <h3>♻️ Durabilité & Circularité des vêtements</h3>
-    <p><strong>Durabilité :</strong> vêtements conçus pour durer avec moins d’impact environnemental.</p>
-    <p><strong>Circularité :</strong> réutilisation, réparation, recyclage des vêtements.</p>
   </div>
 </div>
 
-<!-- INTERVENANTS EXTERNES -->
 <div class="container hidden" id="visiteur">
-  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
+  <a class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
   <div class="section">
-    <h2>🛡️ Consignes – Intervenants externes</h2>
+    <h2>🛡️ Consignes générales – Intervenants externes</h2>
     <ul>
-      <li>Se présenter à l’accueil avant intervention</li>
-      <li>Port des EPI obligatoires</li>
       <li>❌ Échelle type A interdite</li>
       <li>✅ PIRL obligatoire</li>
-      <li>📻 Intervention toiture : radio obligatoire à la sécurité</li>
+      <li>📻 Radio obligatoire pour intervention toiture</li>
       <li>🪪 Badge visiteur obligatoire</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>🔥 Incendie – Consignes d’évacuation (Intervenants)</h2>
+    <h2>🔥 Incendie – Consignes d’évacuation</h2>
     <ul>
-      <li>Arrêter immédiatement l’intervention</li>
-      <li>Couper les outils / machines si possible sans danger</li>
-      <li>Évacuer par l’issue de secours la plus proche</li>
+      <li>Quitter immédiatement le bâtiment</li>
+      <li>Rejoindre le point de rassemblement</li>
       <li>Ne pas utiliser les ascenseurs</li>
-      <li>Se rendre au point de rassemblement</li>
-      <li>Se signaler au responsable Primark ou à la sécurité</li>
     </ul>
+    <a class="btn call" href="tel:+33633669863">📞 Appeler la sécurité</a>
   </div>
 
   <div class="section">
-    <h2>📩 Validation de prise en compte des consignes</h2>
-    <input type="text" id="entreprise" placeholder="Nom de l’entreprise (obligatoire)">
-    <a href="#" class="btn" onclick="sendSMS()">✅ J’ai lu les consignes – Envoyer SMS</a>
-  </div>
+    <h2>✅ Validation obligatoire des consignes</h2>
+    <p>Avant toute intervention, merci de confirmer la prise en compte des consignes de sécurité.</p>
 
-  <div class="section">
-    <h2>🚨 Urgence / Danger</h2>
-    <a class="btn call" href="tel:+33633669863">📞 Appeler le 06 33 66 98 63</a>
+    <input type="text" id="entreprise" placeholder="Nom de l'entreprise (obligatoire)">
+
+    <a id="smsLink" class="btn sms" onclick="sendSMS()">📩 J’ai lu les consignes – Envoyer SMS</a>
   </div>
 </div>
 
@@ -174,12 +150,16 @@
   function sendSMS() {
     const entreprise = document.getElementById("entreprise").value.trim();
     if (!entreprise) {
-      alert("Merci de renseigner le nom de l’entreprise.");
+      alert("Merci de renseigner le nom de l'entreprise.");
       return;
     }
 
-    const message = `Bonjour, la société ${entreprise} confirme avoir pris connaissance des consignes de sécurité EHS 206 – Primark.`;
-    window.location.href = `sms:0633669863?body=${encodeURIComponent(message)}`;
+    const message = encodeURIComponent(
+      "Bonjour, l’entreprise " + entreprise + 
+      " confirme avoir pris connaissance des consignes de sécurité EHS 206 – Primark."
+    );
+
+    window.location.href = "sms:+33633669863?body=" + message;
   }
 </script>
 
