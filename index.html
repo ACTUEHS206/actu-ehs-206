@@ -103,6 +103,40 @@
       font-size: .85rem;
       padding: 24px 16px;
     }
+
+    /* Carte cliquable remontée sécurité */
+    .cta-card {
+      display: block;
+      text-decoration: none;
+      background: linear-gradient(135deg, #d7ecff, #eef6ff);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,.08);
+      border: 1px solid #dbeafe;
+    }
+    .cta-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: #1f2937;
+    }
+    .cta-desc {
+      color: #374151;
+      font-size: .95rem;
+      margin-top: 6px;
+    }
+    .cta-pill {
+      display: inline-block;
+      margin-top: 10px;
+      background: #2b7de9;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: .85rem;
+    }
+
     @media (min-width: 700px) {
       .grid { grid-template-columns: 1fr 1fr; }
     }
@@ -118,7 +152,7 @@
     </div>
     <nav>
       <a href="#magasin">🏬 Magasin</a>
-      <a href="#terrain">🦺 Terrain</a>
+      <a href="#echauffement">💪 Échauffement</a>
       <a href="#incendie">🔥 Incendie</a>
       <a href="#environnement">🌱 Environnement</a>
       <a href="#energie">⚡ Énergie</a>
@@ -143,11 +177,17 @@
       </ul>
     </div>
 
-    <div class="card" id="terrain">
-      <h2><span class="emoji">🦺</span> Terrain</h2>
-      <p class="meta">Playlist Warm Up 206 – échauffement collectif</p>
+    <div class="card" id="echauffement">
+      <h2><span class="emoji">💪</span> Échauffement du matin</h2>
+      <p class="meta">Playlist Warm Up 206 – avec tes collègues</p>
+
+      <ul>
+        <li>Réduit les risques de blessures (dos, épaules, genoux)</li>
+        <li>Prépare le corps à l’effort</li>
+        <li>Améliore la concentration</li>
+        <li>Crée une bonne ambiance d’équipe</li>
+      </ul>
       
-      <!-- Playlist Warm Up YouTube Intégrée -->
       <div style="margin-top:10px">
         <iframe 
           width="100%" 
@@ -159,7 +199,6 @@
           allowfullscreen>
         </iframe>
       </div>
-      
     </div>
   </section>
 
@@ -173,7 +212,6 @@
         <li>Points de rassemblement</li>
       </ul>
 
-      <!-- Playlist Evacuation YouTube Intégrée -->
       <div style="margin-top:10px">
         <iframe 
           width="100%" 
@@ -208,6 +246,18 @@
         <li>Bon usage des appareils</li>
       </ul>
     </div>
+  </section>
+
+  <!-- Carte cliquable Remonter une idée sécurité -->
+  <section style="margin-top:16px">
+    <a class="cta-card" href="mailto:ehs206@primark.fr?subject=Remontée%20sécurité%20EHS%20206">
+      <div class="cta-title">🛡️ Remonter une idée sécurité</div>
+      <div class="cta-desc">
+        Tu as repéré un risque ou tu as une bonne idée pour améliorer la sécurité au travail ?
+        Clique ici pour nous prévenir.
+      </div>
+      <span class="cta-pill">📩 Envoyer un message</span>
+    </a>
   </section>
 
 </main>
