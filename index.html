@@ -1,62 +1,144 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EHS 206 - Accueil</title>
+  <meta charset="UTF-8">
+  <title>EHS 206 - Primark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .container {
+      background: #eaf6ff;
+      color: #002b45;
       text-align: center;
-      max-width: 600px;
+    }
+    header {
+      background: #00a3e0;
+      color: white;
       padding: 20px;
     }
-    h1 {
-      margin-bottom: 40px;
-    }
+    h1 { margin: 0; }
+    .container { padding: 20px; }
     .btn {
       display: block;
-      width: 100%;
+      margin: 20px auto;
       padding: 20px;
-      margin: 20px 0;
-      font-size: 20px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
+      max-width: 400px;
+      background: #00a3e0;
+      color: white;
       text-decoration: none;
-      color: #fff;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
     }
-    .btn-primary {
-      background: #22c55e;
+    .btn.secondary { background: #0077b6; }
+    .section {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 700px;
+      text-align: left;
     }
-    .btn-secondary {
-      background: #3b82f6;
+    iframe {
+      width: 100%;
+      height: 215px;
+      border-radius: 10px;
     }
-    .btn:hover {
-      opacity: 0.9;
+    .hidden { display: none; }
+    footer {
+      margin: 30px 0;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Bienvenue sur EHS 206</h1>
 
-    <a href="blog.html" class="btn btn-primary">
-      Je suis un collaborateur Primark
-    </a>
+<header>
+  <h1>EHS 206 – Sécurité & Prévention</h1>
+  <p>Primark</p>
+</header>
 
-    <a href="visiteurs.html" class="btn btn-secondary">
-      Je suis un intervenant externe ou un visiteur
-    </a>
+<div class="container" id="home">
+  <a href="#" class="btn" onclick="showSection('collaborateur')">Je suis un collaborateur Primark</a>
+  <a href="#" class="btn secondary" onclick="showSection('visiteur')">Je suis un intervenant externe ou un visiteur</a>
+</div>
+
+<div class="container hidden" id="collaborateur">
+
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
+
+  <div class="section">
+    <h2>🔥 Incendie – Consignes d’évacuation</h2>
+    <ul>
+      <li>Au retentissement de l’alarme évacuation :</li>
+      <li>Se diriger vers l’issue de secours la plus proche</li>
+      <li>Ne pas utiliser les ascenseurs</li>
+      <li>Les guides files sont les employés qui ont été formés</li>
+      <li>Les serres files sont les encadrants et les agents SSIAP</li>
+      <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
+      <li>Se diriger au point de rassemblement afin de faire l’appel</li>
+    </ul>
+    <p><strong>🎥 Exercices d’évacuation :</strong></p>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPXNAgp7nOqMcne68Oi3Minz" allowfullscreen></iframe>
   </div>
+
+  <div class="section">
+    <h2>🤸 Échauffement du matin</h2>
+    <p><strong>Avantages de l’échauffement :</strong></p>
+    <ul>
+      <li>Réduit le risque de blessure</li>
+      <li>Prépare le corps à l’effort</li>
+      <li>Améliore la concentration</li>
+      <li>Diminue les douleurs musculaires</li>
+      <li>Favorise la bonne humeur et l’énergie</li>
+    </ul>
+    <p><strong>🎥 WARM UP 206 avec tes collègues :</strong></p>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX" allowfullscreen></iframe>
+  </div>
+
+  <div class="section">
+    <h2>🧍 Gestes & Postures</h2>
+    <p>Adopter les bons gestes permet d’éviter les douleurs et les accidents de travail.</p>
+    <iframe src="https://www.youtube.com/embed/4hE3gMf88V4" allowfullscreen></iframe>
+  </div>
+
+  <div class="section">
+    <h2>💡 Une idée ? Un problème sécurité ?</h2>
+    <p>Clique ci-dessous pour envoyer un mail :</p>
+    <a class="btn" href="mailto:ehs206@primark.fr">Envoyer une idée / Remonter un problème sécuritaire</a>
+  </div>
+
+</div>
+
+<div class="container hidden" id="visiteur">
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
+
+  <div class="section">
+    <h2>🛡️ Consignes de sécurité – Visiteurs & Intervenants externes</h2>
+    <ul>
+      <li>Se présenter à l’accueil avant toute intervention</li>
+      <li>Porter les EPI obligatoires</li>
+      <li>Respecter les consignes du personnel Primark</li>
+      <li>Ne pas accéder aux zones interdites</li>
+      <li>Signaler tout incident ou situation dangereuse</li>
+      <li>En cas d’alarme, suivre les consignes d’évacuation</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>© EHS 206 – Primark</p>
+</footer>
+
+<script>
+  function showSection(id) {
+    document.getElementById('home').classList.add('hidden');
+    document.getElementById('collaborateur').classList.add('hidden');
+    document.getElementById('visiteur').classList.add('hidden');
+    document.getElementById(id).classList.remove('hidden');
+  }
+</script>
+
 </body>
 </html>
