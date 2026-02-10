@@ -68,7 +68,6 @@
       padding: 16px;
       margin-bottom: 16px;
     }
-    .hero h1 { margin: 0 0 6px 0; }
     .grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -120,6 +119,7 @@
     <nav>
       <a href="#magasin">🏬 Magasin</a>
       <a href="#terrain">🦺 Terrain</a>
+      <a href="#incendie">🔥 Incendie</a>
       <a href="#environnement">🌱 Environnement</a>
       <a href="#energie">⚡ Énergie</a>
     </nav>
@@ -145,29 +145,63 @@
 
     <div class="card" id="terrain">
       <h2><span class="emoji">🦺</span> Terrain</h2>
-      <p class="meta">Infos EHS côté terrain</p>
-      <ul>
-        <li>Presque-accidents</li>
-        <li>Situations à risque</li>
-        <li>Actions correctives</li>
-      </ul>
+      <p class="meta">Playlist Warm Up 206 – échauffement collectif</p>
+      
+      <!-- Playlist Warm Up YouTube Intégrée -->
+      <div style="margin-top:10px">
+        <iframe 
+          width="100%" 
+          height="250" 
+          src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX" 
+          title="Playlist Warm Up 206"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      
     </div>
   </section>
 
-  <section class="grid" style="margin-top:12px">
-    <div class="card" id="environnement">
+  <section class="grid" style="margin-top:12px" id="incendie">
+    <div class="card">
+      <h2><span class="emoji">🔥</span> Incendie & Évacuation</h2>
+      <p class="meta">Playlist des exercices d’évacuation du magasin</p>
+      <ul>
+        <li>Consignes incendie</li>
+        <li>Chemins d’évacuation</li>
+        <li>Points de rassemblement</li>
+      </ul>
+
+      <!-- Playlist Evacuation YouTube Intégrée -->
+      <div style="margin-top:10px">
+        <iframe 
+          width="100%" 
+          height="250" 
+          src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPXNAgp7nOqMcne68Oi3Minz" 
+          title="Playlist exercices d'évacuation"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid" style="margin-top:12px" id="environnement">
+    <div class="card">
       <h2><span class="emoji">🌱</span> Environnement</h2>
-      <p class="meta">Réduction de l’impact environnemental</p>
       <ul>
         <li>Tri des déchets</li>
         <li>Réduction du plastique</li>
         <li>Bonnes pratiques éco-responsables</li>
       </ul>
     </div>
+  </section>
 
-    <div class="card" id="energie">
+  <section class="grid" style="margin-top:12px" id="energie">
+    <div class="card">
       <h2><span class="emoji">⚡</span> Gestion de l’énergie</h2>
-      <p class="meta">Économies & bonnes pratiques</p>
       <ul>
         <li>Éteindre les équipements inutiles</li>
         <li>Optimiser l’éclairage</li>
@@ -175,6 +209,7 @@
       </ul>
     </div>
   </section>
+
 </main>
 
 <footer>
@@ -182,4 +217,4 @@
 </footer>
 
 </body>
-</html>gilet 
+</html>
