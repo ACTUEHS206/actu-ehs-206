@@ -2,150 +2,146 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>EHS 206 – Primark</title>
+  <title>EHS 206 - Primark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f5f5f5;
-    }
-    header {
-      background: #1e3a8a;
-      color: white;
-      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #eaf6ff;
+      color: #002b45;
       text-align: center;
     }
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      display: none;
-    }
-    .home {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 40px;
-      max-width: 600px;
-      margin: auto;
-    }
-    .btn {
-      padding: 20px;
-      font-size: 18px;
-      background: #2563eb;
+    header {
+      background: #00a3e0;
       color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
+      padding: 20px;
     }
-    .btn:hover {
-      background: #1e40af;
+    h1 { margin: 0; }
+    .container { padding: 20px; }
+    .btn {
+      display: block;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 420px;
+      background: #00a3e0;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
     }
-    section {
+    .btn.secondary { background: #0077b6; }
+    .btn.call { background: #28a745; }
+    .section {
       background: white;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      text-align: left;
     }
-    h2 {
-      color: #1e3a8a;
+    .section img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 10px 0;
     }
     iframe {
       width: 100%;
-      height: 315px;
+      height: 215px;
       border-radius: 10px;
-      margin-top: 10px;
     }
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-    .call-btn {
-      display: inline-block;
-      background: #dc2626;
-      color: white;
-      padding: 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
+    .hidden { display: none; }
+    footer {
+      margin: 30px 0;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>EHS 206 – Primark Cagnes-sur-Mer</h1>
+  <h1>EHS 206 – Sécurité, Environnement & RSE</h1>
+  <p>Primark</p>
 </header>
 
-<div class="home" id="home">
-  <button class="btn" onclick="showCollab()">👕 Je suis un collaborateur Primark</button>
-  <button class="btn" onclick="showExternal()">🦺 Je suis un intervenant externe ou un visiteur</button>
+<div class="container" id="home">
+  <a href="#" class="btn" onclick="showSection('collaborateur')">Je suis un collaborateur Primark</a>
+  <a href="#" class="btn secondary" onclick="showSection('visiteur')">Je suis un intervenant externe ou un visiteur</a>
 </div>
 
-<div class="container" id="collaborateur">
+<div class="container hidden" id="collaborateur">
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
-  <section>
-    <h2>🔥 Incendie – Procédure d’évacuation</h2>
+  <div class="section">
+    <h2>🔥 Incendie – Consignes d’évacuation</h2>
     <ul>
       <li>Au retentissement de l’alarme évacuation :</li>
       <li>Se diriger vers l’issue de secours la plus proche</li>
       <li>Ne pas utiliser les ascenseurs</li>
-      <li>Les guides files sont les employés formés</li>
-      <li>Les serres files sont les encadrants et agents SSIAP</li>
+      <li>Les guides files sont les employés qui ont été formés</li>
+      <li>Les serres files sont les encadrants et les agents SSIAP</li>
       <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
       <li>Se diriger au point de rassemblement afin de faire l’appel</li>
     </ul>
 
-    <p><strong>📍 Point de rassemblement :</strong><br>
-      En face de l’entrée staff du matin, à l’arrière du magasin,  
-      vers l’entrée livraison du centre commercial.
-    </p>
+    <p><strong>📍 Point de rassemblement du magasin :</strong></p>
+    <img src="point_rassemblement.jpg" alt="Point de rassemblement du magasin">
 
-    <img src="point-rassemblement.jpg" alt="Point de rassemblement Primark">
+    <p><strong>🎥 Exercices d’évacuation :</strong></p>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPXNAgp7nOqMcne68Oi3Minz" allowfullscreen></iframe>
+  </div>
 
-    <h3>🎥 Exercices d’évacuation</h3>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPXNAgp7nOqMcne68Oi3Minz"></iframe>
-  </section>
-
-  <section>
+  <div class="section">
     <h2>🤸 Échauffement du matin</h2>
-    <p><strong>Avantages :</strong></p>
     <ul>
-      <li>Réduction des TMS</li>
-      <li>Moins de blessures</li>
-      <li>Meilleure énergie au travail</li>
-      <li>Esprit d’équipe</li>
+      <li>Réduit le risque de blessure</li>
+      <li>Prépare le corps à l’effort</li>
+      <li>Améliore la concentration</li>
+      <li>Diminue les douleurs musculaires</li>
+      <li>Favorise la bonne humeur et l’énergie</li>
     </ul>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX"></iframe>
-  </section>
+    <p><strong>🎥 WARM UP 206 avec tes collègues :</strong></p>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX" allowfullscreen></iframe>
+  </div>
 
-  <section>
-    <h2>🦴 Gestes & Postures</h2>
-    <iframe src="https://www.youtube.com/embed/4hE3gMf88V4"></iframe>
-  </section>
+  <div class="section">
+    <h2>🧍 Gestes & Postures</h2>
+    <p>Adopter les bons gestes permet d’éviter les douleurs et les accidents de travail.</p>
+    <iframe src="https://www.youtube.com/embed/4hE3gMf88V4" allowfullscreen></iframe>
+  </div>
 
-  <section>
-    <h2>🌱 Environnement & RSE</h2>
+  <div class="section">
+    <h2>🌍 Environnement & RSE</h2>
     <ul>
-      <li>Tri des déchets</li>
-      <li>Réduction du plastique</li>
-      <li>Économie d’énergie</li>
-      <li>Respect de l’environnement de travail</li>
+      <li>Tri des déchets et réduction du gaspillage</li>
+      <li>Économies d’énergie</li>
+      <li>Respect des procédures environnementales</li>
+      <li>Chaque collaborateur est acteur de la démarche RSE</li>
     </ul>
-  </section>
+  </div>
 
-  <section>
-    <h2>📩 Une idée ou un problème sécurité ?</h2>
-    <a class="call-btn" href="mailto:ehs206@primark.fr">📧 Envoyer un message</a>
-  </section>
-
+  <div class="section">
+    <h2>💡 Une idée ? Un problème sécurité ?</h2>
+    <a class="btn" href="mailto:ehs206@primark.fr">Envoyer une idée / Remonter un problème sécuritaire</a>
+  </div>
 </div>
 
-<div class="container" id="external">
+<div class="container hidden" id="visiteur">
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
-  <section>
+  <div class="section">
+    <h2>🛡️ Consignes générales – Visiteurs & Intervenants</h2>
+    <ul>
+      <li>Se présenter à l’accueil avant toute intervention</li>
+      <li>Porter les EPI obligatoires</li>
+      <li>Respecter les consignes du personnel Primark</li>
+      <li>Ne pas accéder aux zones interdites</li>
+      <li>Signaler toute situation dangereuse</li>
+    </ul>
+  </div>
+
+  <div class="section">
     <h2>🔥 Incendie – Consignes d’évacuation</h2>
     <ul>
       <li>Au retentissement de l’alarme évacuation :</li>
@@ -153,29 +149,25 @@
       <li>Ne pas utiliser les ascenseurs</li>
       <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
       <li>Se diriger au point de rassemblement afin de faire l’appel</li>
-      <li>Si besoin, contactez la sécurité</li>
     </ul>
 
-    <p><strong>📍 Point de rassemblement :</strong><br>
-      En face de l’entrée staff du matin, à l’arrière du magasin,  
-      vers l’entrée livraison du centre commercial.
-    </p>
+    <p><strong>📍 Point de rassemblement du magasin :</strong></p>
+    <img src="point_rassemblement.jpg" alt="Point de rassemblement du magasin">
 
-    <img src="point-rassemblement.jpg" alt="Point de rassemblement Primark">
-
-    <a class="call-btn" href="tel:0633669863">📞 Appeler la sécurité</a>
-  </section>
-
+    <a class="btn call" href="tel:+33633669863">📞 Appeler le 06 33 66 98 63</a>
+  </div>
 </div>
 
+<footer>
+  <p>© EHS 206 – Primark</p>
+</footer>
+
 <script>
-  function showCollab() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("collaborateur").style.display = "block";
-  }
-  function showExternal() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("external").style.display = "block";
+  function showSection(id) {
+    document.getElementById('home').classList.add('hidden');
+    document.getElementById('collaborateur').classList.add('hidden');
+    document.getElementById('visiteur').classList.add('hidden');
+    document.getElementById(id).classList.remove('hidden');
   }
 </script>
 
