@@ -19,165 +19,106 @@
       padding: 20px;
       max-width: 900px;
       margin: auto;
-      display: none;
-    }
-    .home {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 40px;
-      max-width: 600px;
-      margin: auto;
-    }
-    .btn {
-      padding: 20px;
-      font-size: 18px;
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #1e40af;
-    }
-    section {
       background: white;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
     }
     h2 {
       color: #1e3a8a;
+      border-bottom: 2px solid #1e3a8a;
+      padding-bottom: 5px;
     }
-    iframe {
-      width: 100%;
-      height: 315px;
-      border-radius: 10px;
-      margin-top: 10px;
+    .section {
+      margin-bottom: 30px;
     }
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-    .call-btn {
+    .btn-call {
       display: inline-block;
+      margin-top: 10px;
+      padding: 12px 20px;
       background: #dc2626;
       color: white;
-      padding: 15px;
-      border-radius: 8px;
       text-decoration: none;
+      border-radius: 6px;
       font-weight: bold;
+    }
+    .btn-call:hover {
+      background: #b91c1c;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
       margin-top: 10px;
+      border: 2px solid #ddd;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>EHS 206 – Primark Cagnes-sur-Mer</h1>
+  <h1>Blog EHS – Primark 206</h1>
+  <p>Informations Sécurité, Environnement & RSE</p>
 </header>
 
-<div class="home" id="home">
-  <button class="btn" onclick="showCollab()">👕 Je suis un collaborateur Primark</button>
-  <button class="btn" onclick="showExternal()">🦺 Je suis un intervenant externe ou un visiteur</button>
-</div>
+<div class="container">
 
-<div class="container" id="collaborateur">
+  <div class="section">
+    <h2>🦺 Sécurité – Collaborateurs Primark</h2>
+    <p>Consignes de sécurité générales pour les collaborateurs Primark.</p>
 
-  <section>
-    <h2>🔥 Incendie – Procédure d’évacuation</h2>
+    <h3>🔥 Incendie – Consignes d’évacuation</h3>
     <ul>
-      <li>Au retentissement de l’alarme évacuation :</li>
+      <li>Au retentissement de l’alarme évacuation</li>
       <li>Se diriger vers l’issue de secours la plus proche</li>
       <li>Ne pas utiliser les ascenseurs</li>
-      <li>Les guides files sont les employés formés</li>
-      <li>Les serres files sont les encadrants et agents SSIAP</li>
       <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
-      <li>Se diriger au point de rassemblement afin de faire l’appel</li>
+      <li>Se diriger vers le point de rassemblement pour l’appel</li>
     </ul>
 
-    <p><strong>📍 Point de rassemblement :</strong><br>
-      En face de l’entrée staff du matin, à l’arrière du magasin,  
-      vers l’entrée livraison du centre commercial.
-    </p>
+    <p><strong>📍 Point de rassemblement :</strong> en face de l’entrée staff du matin, à l’arrière du magasin, vers l’entrée livraison du centre commercial.</p>
 
-    <img src="point-rassemblement.jpg" alt="Point de rassemblement Primark">
+    <img src="point-rassemblement.jpg" alt="Point de rassemblement Primark Cagnes-sur-Mer">
+  </div>
 
-    <h3>🎥 Exercices d’évacuation</h3>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPXNAgp7nOqMcne68Oi3Minz"></iframe>
-  </section>
+  <div class="section">
+    <h2>👷 Intervenants externes</h2>
+    <p>Consignes obligatoires pour toute entreprise extérieure.</p>
 
-  <section>
-    <h2>🤸 Échauffement du matin</h2>
-    <p><strong>Avantages :</strong></p>
+    <h3>🔥 Incendie – Consignes d’évacuation</h3>
     <ul>
-      <li>Réduction des TMS</li>
-      <li>Moins de blessures</li>
-      <li>Meilleure énergie au travail</li>
-      <li>Esprit d’équipe</li>
+      <li>Au retentissement de l’alarme évacuation</li>
+      <li>Se diriger vers l’issue de secours la plus proche</li>
+      <li>Ne pas utiliser les ascenseurs</li>
+      <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
+      <li>Se diriger vers le point de rassemblement afin de faire l’appel</li>
     </ul>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX"></iframe>
-  </section>
 
-  <section>
-    <h2>🦴 Gestes & Postures</h2>
-    <iframe src="https://www.youtube.com/embed/4hE3gMf88V4"></iframe>
-  </section>
+    <a class="btn-call" href="tel:0633669863">📞 Appeler le 06 33 66 98 63</a>
 
-  <section>
+    <p><strong>📍 Point de rassemblement :</strong> en face de l’entrée staff du matin, à l’arrière du magasin, vers l’entrée livraison du centre commercial.</p>
+
+    <img src="point-rassemblement.jpg" alt="Point de rassemblement Primark Cagnes-sur-Mer">
+  </div>
+
+  <div class="section">
     <h2>🌱 Environnement & RSE</h2>
     <ul>
-      <li>Tri des déchets</li>
-      <li>Réduction du plastique</li>
-      <li>Économie d’énergie</li>
-      <li>Respect de l’environnement de travail</li>
+      <li>Tri des déchets obligatoire</li>
+      <li>Respect des zones propres / zones sales</li>
+      <li>Réduction des consommations d’énergie</li>
+      <li>Signalement de toute fuite ou pollution</li>
+      <li>Respect des engagements RSE Primark</li>
     </ul>
-  </section>
-
-  <section>
-    <h2>📩 Une idée ou un problème sécurité ?</h2>
-    <a class="call-btn" href="mailto:ehs206@primark.fr">📧 Envoyer un message</a>
-  </section>
+  </div>
 
 </div>
 
-<div class="container" id="external">
-
-  <section>
-    <h2>🔥 Incendie – Consignes d’évacuation</h2>
-    <ul>
-      <li>Au retentissement de l’alarme évacuation :</li>
-      <li>Se diriger vers l’issue de secours la plus proche</li>
-      <li>Ne pas utiliser les ascenseurs</li>
-      <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
-      <li>Se diriger au point de rassemblement afin de faire l’appel</li>
-      <li>Si besoin, contactez la sécurité</li>
-    </ul>
-
-    <p><strong>📍 Point de rassemblement :</strong><br>
-      En face de l’entrée staff du matin, à l’arrière du magasin,  
-      vers l’entrée livraison du centre commercial.
-    </p>
-
-    <img src="point-rassemblement.jpg" alt="Point de rassemblement Primark">
-
-    <a class="call-btn" href="tel:0633669863">📞 Appeler la sécurité</a>
-  </section>
-
-</div>
-
-<script>
-  function showCollab() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("collaborateur").style.display = "block";
-  }
-  function showExternal() {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("external").style.display = "block";
-  }
-</script>
+<footer>
+  © 2026 – Primark Cagnes-sur-Mer – EHS 206
+</footer>
 
 </body>
 </html>
