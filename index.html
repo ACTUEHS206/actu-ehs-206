@@ -30,9 +30,12 @@
       border-radius: 12px;
       font-size: 18px;
       font-weight: bold;
+      cursor: pointer;
+      border: none;
     }
     .btn.secondary { background: #0077b6; }
     .btn.call { background: #28a745; }
+    .btn.sms { background: #f59e0b; }
     .section {
       background: white;
       margin: 20px auto;
@@ -50,6 +53,14 @@
     footer {
       margin: 30px 0;
       font-size: 14px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin: 10px 0;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -69,40 +80,6 @@
   <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
   <div class="section">
-    <h2>🔥 Incendie – Consignes d’évacuation</h2>
-    <ul>
-      <li>Au retentissement de l’alarme évacuation :</li>
-      <li>Se diriger vers l’issue de secours la plus proche</li>
-      <li>Ne pas utiliser les ascenseurs</li>
-      <li>Les guides files sont les employés qui ont été formés</li>
-      <li>Les serres files sont les encadrants et les agents SSIAP</li>
-      <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
-      <li>Se diriger au point de rassemblement afin de faire l’appel</li>
-    </ul>
-    <p><strong>🎥 Exercices d’évacuation :</strong></p>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPXNAgp7nOqMcne68Oi3Minz" allowfullscreen></iframe>
-  </div>
-
-  <div class="section">
-    <h2>🤸 Échauffement du matin</h2>
-    <ul>
-      <li>Réduit le risque de blessure</li>
-      <li>Prépare le corps à l’effort</li>
-      <li>Améliore la concentration</li>
-      <li>Diminue les douleurs musculaires</li>
-      <li>Favorise la bonne humeur et l’énergie</li>
-    </ul>
-    <p><strong>🎥 WARM UP 206 avec tes collègues :</strong></p>
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX" allowfullscreen></iframe>
-  </div>
-
-  <div class="section">
-    <h2>🧍 Gestes & Postures</h2>
-    <p>Adopter les bons gestes permet d’éviter les douleurs et les accidents de travail.</p>
-    <iframe src="https://www.youtube.com/embed/4hE3gMf88V4" allowfullscreen></iframe>
-  </div>
-
-  <div class="section">
     <h2>🌍 Environnement & RSE</h2>
     <ul>
       <li>Tri des déchets et réduction du gaspillage</li>
@@ -113,22 +90,9 @@
 
     <h3>♻️ Durabilité & Circularité des vêtements</h3>
     <p><strong>La durabilité</strong> consiste à concevoir et utiliser des vêtements qui durent plus longtemps, 
-    avec moins d’impact sur l’environnement (matières plus responsables, réduction des déchets, consommation raisonnée).</p>
+    avec moins d’impact sur l’environnement.</p>
 
-    <p><strong>La circularité</strong> signifie que les vêtements ne sont pas jetés après usage, mais réutilisés, réparés, recyclés 
-    ou transformés afin de prolonger leur cycle de vie.</p>
-
-    <ul>
-      <li>Favoriser la réparation plutôt que le remplacement</li>
-      <li>Encourager le recyclage textile</li>
-      <li>Limiter le gaspillage et la surconsommation</li>
-      <li>Participer à une mode plus responsable</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>💡 Une idée ? Un problème sécurité ?</h2>
-    <a class="btn" href="mailto:ehs206@primark.fr">Envoyer une idée / Remonter un problème sécuritaire</a>
+    <p><strong>La circularité</strong> signifie que les vêtements sont réutilisés, réparés ou recyclés afin de prolonger leur cycle de vie.</p>
   </div>
 </div>
 
@@ -140,23 +104,23 @@
     <ul>
       <li>Se présenter à l’accueil avant toute intervention</li>
       <li>Porter les EPI obligatoires</li>
-      <li>Respecter les consignes du personnel Primark</li>
+      <li>Badge visiteur obligatoire pour accéder aux locaux et travailler</li>
+      <li>Interdiction d’utiliser des échelles type A – uniquement PIRL autorisée</li>
+      <li>Intervention sur le toit : radio obligatoire à la sécurité</li>
       <li>Ne pas accéder aux zones interdites</li>
       <li>Signaler toute situation dangereuse</li>
     </ul>
+
+    <a class="btn call" href="tel:+33633669863">📞 Signaler une situation dangereuse</a>
   </div>
 
   <div class="section">
-    <h2>🔥 Incendie – Consignes d’évacuation</h2>
-    <ul>
-      <li>Au retentissement de l’alarme évacuation :</li>
-      <li>Se diriger vers l’issue de secours la plus proche</li>
-      <li>Ne pas utiliser les ascenseurs</li>
-      <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
-      <li>Se diriger au point de rassemblement afin de faire l’appel</li>
-      <li>Si besoin, informer de votre position :</li>
-    </ul>
-    <a class="btn call" href="tel:+33633669863">📞 Appeler le 06 33 66 98 63</a>
+    <h2>✅ Validation de lecture des consignes</h2>
+    <p>Merci de confirmer que vous avez bien pris connaissance des consignes de sécurité.</p>
+
+    <input type="text" id="societe" placeholder="Nom de l’entreprise *" required>
+
+    <button class="btn sms" onclick="envoyerSMS()">📩 J’ai lu les consignes</button>
   </div>
 </div>
 
@@ -170,6 +134,20 @@
     document.getElementById('collaborateur').classList.add('hidden');
     document.getElementById('visiteur').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
+  }
+
+  function envoyerSMS() {
+    var societe = document.getElementById("societe").value.trim();
+    if (societe === "") {
+      alert("Merci de renseigner le nom de l’entreprise.");
+      return;
+    }
+
+    var message = encodeURIComponent(
+      "Entreprise : " + societe + " - J’ai lu et compris les consignes de sécurité EHS 206 Primark."
+    );
+
+    window.location.href = "sms:+33633669863?body=" + message;
   }
 </script>
 
