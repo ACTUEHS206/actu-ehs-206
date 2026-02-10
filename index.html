@@ -3,202 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ACTU EHS 206 – Accueil</title>
+  <title>EHS 206 - Accueil</title>
   <style>
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#eaf6ff;min-height:100vh;display:flex;align-items:center;justify-content:center}
-    .container{max-width:520px;width:100%;padding:20px;text-align:center}
-    h1{margin-bottom:18px}
-    .btn{display:block;width:100%;padding:18px;margin:12px 0;border-radius:16px;text-decoration:none;font-size:1.1rem;font-weight:800;color:#fff}
-    .btn-primary{background:#2b7de9}
-    .btn-secondary{background:#16a34a}
-    .note{margin-top:12px;font-size:.9rem;color:#374151}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 40px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+    }
+    .btn-primary {
+      background: #22c55e;
+    }
+    .btn-secondary {
+      background: #3b82f6;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Bienvenue sur ACTU EHS 206</h1>
-    <a class="btn btn-primary" href="blog.html">👷‍♂️ Je suis un collaborateur Primark</a>
-    <a class="btn btn-secondary" href="visiteurs.html">👋 Je suis un intervenant externe ou un visiteur</a>
-    <p class="note">Choisissez votre profil pour accéder aux bonnes informations sécurité.</p>
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ACTU EHS 206</title>
-  <style>
-    :root{--bg:#eaf6ff;--card:#fff;--primary:#2b7de9;--text:#1f2937;--muted:#6b7280}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    header{position:sticky;top:0;background:#ffffffcc;backdrop-filter:blur(8px);border-bottom:1px solid #e5e7eb;z-index:10}
-    .wrap{max-width:900px;margin:0 auto;padding:12px 16px}
-    .title{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem}
-    .badge{background:var(--primary);color:#fff;padding:6px 10px;border-radius:999px;font-size:.8rem}
-    nav{display:flex;gap:8px;margin-top:8px;overflow-x:auto}
-    nav a{text-decoration:none;color:var(--primary);background:#eef4ff;padding:8px 12px;border-radius:999px;font-size:.9rem;white-space:nowrap}
-    main{padding:16px}
-    .hero{background:linear-gradient(135deg,#cfe9ff,#eaf6ff);border-radius:16px;padding:16px;margin-bottom:16px}
-    .grid{display:grid;grid-template-columns:1fr;gap:12px}
-    .card{background:var(--card);border-radius:16px;padding:14px;box-shadow:0 10px 20px rgba(0,0,0,.06)}
-    .card h2{display:flex;align-items:center;gap:8px;margin:0 0 6px 0;font-size:1.05rem}
-    .emoji{font-size:1.3rem;background:#eef4ff;border-radius:10px;padding:6px 8px}
-    .meta{color:var(--muted);font-size:.85rem;margin-bottom:8px}
-    footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 16px}
-    .cta-card{display:block;text-decoration:none;background:linear-gradient(135deg,#d7ecff,#eef6ff);border-radius:16px;padding:16px;box-shadow:0 10px 20px rgba(0,0,0,.08);border:1px solid #dbeafe}
-    .cta-title{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;color:#1f2937}
-    .cta-desc{color:#374151;font-size:.95rem;margin-top:6px}
-    .cta-pill{display:inline-block;margin-top:10px;background:#2b7de9;color:#fff;padding:8px 12px;border-radius:999px;font-size:.85rem}
-    @media(min-width:700px){.grid{grid-template-columns:1fr 1fr}}
-  </style>
-</head>
-<body>
+    <h1>Bienvenue sur EHS 206</h1>
 
-<header>
-  <div class="wrap">
-    <div class="title"><span class="badge">ACTU</span><span>EHS 206</span></div>
-    <nav>
-      <a href="#magasin">🏬 Magasin</a>
-      <a href="#echauffement">💪 Échauffement</a>
-      <a href="#gestes">🧍‍♂️ Gestes & postures</a>
-      <a href="#incendie">🔥 Incendie</a>
-      <a href="#environnement">🌱 Environnement</a>
-      <a href="#energie">⚡ Énergie</a>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap">
-  <section class="hero">
-    <h1>Actualités EHS – simples & utiles</h1>
-    <p class="meta">Sécurité, environnement et énergie – version mobile friendly 📱</p>
-  </section>
-
-  <section id="magasin" class="grid">
-    <div class="card">
-      <h2><span class="emoji">🏬</span> Magasin</h2>
-      <ul>
-        <li>Rappels sécurité (incendie, circulation, manutention)</li>
-        <li>Bonnes pratiques au quotidien</li>
-        <li>Alertes & retours terrain</li>
-      </ul>
-    </div>
-
-    <div class="card" id="echauffement">
-      <h2><span class="emoji">💪</span> Échauffement du matin</h2>
-      <ul>
-        <li>Réduit les risques de blessures</li>
-        <li>Prépare le corps à l’effort</li>
-        <li>Améliore la concentration</li>
-        <li>Crée une bonne ambiance d’équipe</li>
-      </ul>
-      <iframe width="100%" height="240" src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section class="grid" id="gestes" style="margin-top:12px">
-    <div class="card">
-      <h2><span class="emoji">🧍‍♂️</span> Gestes & postures</h2>
-      <ul>
-        <li>Garder le dos droit en portant une charge</li>
-        <li>Plier les jambes, pas le dos</li>
-        <li>Éviter les torsions</li>
-        <li>Demander de l’aide si la charge est lourde</li>
-      </ul>
-      <iframe width="100%" height="240" src="https://www.youtube.com/embed/4hE3gMf88V4" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section class="grid" id="incendie" style="margin-top:12px">
-    <div class="card">
-      <h2><span class="emoji">🔥</span> Incendie & Évacuation</h2>
-      <ul>
-        <li>Se diriger vers l’issue de secours la plus proche</li>
-        <li>Ne pas utiliser les ascenseurs</li>
-        <li>Les guides-files sont les employés formés</li>
-        <li>Les serre-files sont les encadrants et agents SSIAP</li>
-        <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
-        <li>Se diriger au point de rassemblement afin de faire l’appel</li>
-      </ul>
-      <iframe width="100%" height="240" src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPXNAgp7nOqMcne68Oi3Minz" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section class="grid" id="environnement" style="margin-top:12px">
-    <div class="card">
-      <h2><span class="emoji">🌱</span> Environnement</h2>
-      <ul>
-        <li>Tri des déchets</li>
-        <li>Réduction du plastique</li>
-        <li>Éco-gestes au travail</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="grid" id="energie" style="margin-top:12px">
-    <div class="card">
-      <h2><span class="emoji">⚡</span> Gestion de l’énergie</h2>
-      <ul>
-        <li>Éteindre les équipements inutiles</li>
-        <li>Optimiser l’éclairage</li>
-        <li>Bon usage des appareils</li>
-      </ul>
-    </div>
-  </section>
-
-  <section style="margin-top:16px">
-    <a class="cta-card" href="mailto:ehs206@primark.fr?subject=Remontée%20sécurité%20EHS%20206">
-      <div class="cta-title">🛡️ Remonter une idée sécurité</div>
-      <div class="cta-desc">Signaler un risque ou proposer une amélioration.</div>
-      <span class="cta-pill">📩 Envoyer un message</span>
+    <a href="blog.html" class="btn btn-primary">
+      Je suis un collaborateur Primark
     </a>
-  </section>
-</main>
 
-<footer>© 2026 – ACTU EHS 206 · Lisible sur iPhone & Android</footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Consignes Sécurité – Visiteurs</title>
-  <style>
-    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#f0f9ff;color:#1f2937}
-    header{background:#16a34a;color:#fff;padding:16px;text-align:center;font-weight:800}
-    .wrap{max-width:800px;margin:auto;padding:16px}
-    .card{background:#fff;border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 6px 14px rgba(0,0,0,.08)}
-    .back{display:inline-block;margin-top:16px;text-decoration:none;background:#eaf6ff;padding:10px 14px;border-radius:999px;color:#1f2937;font-weight:700}
-  </style>
-</head>
-<body>
-<header>Consignes de sécurité – Visiteurs & Intervenants externes</header>
-<div class="wrap">
-  <div class="card">
-    <h2>🚨 En cas d’alarme incendie</h2>
-    <ul>
-      <li>Se diriger vers l’issue de secours la plus proche</li>
-      <li>Ne pas utiliser les ascenseurs</li>
-      <li>Suivre les consignes du personnel Primark</li>
-      <li>Ne pas retourner chercher des affaires personnelles</li>
-      <li>Se diriger vers le point de rassemblement</li>
-    </ul>
+    <a href="visiteurs.html" class="btn btn-secondary">
+      Je suis un intervenant externe ou un visiteur
+    </a>
   </div>
-
-  <div class="card">
-    <h2>👷‍♂️ Règles générales</h2>
-    <ul>
-      <li>Respecter les consignes sécurité affichées</li>
-      <li>Rester dans les zones autorisées</li>
-      <li>Port des EPI si demandé</li>
-      <li>Signaler toute situation dangereuse</li>
-    </ul>
-  </div>
-
-  <a class="back" href="index.html">⬅️ Retour à l’accueil</a>
-</div>
 </body>
 </html>
