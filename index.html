@@ -1,1 +1,148 @@
-Création du site ACTU EHS 206
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ACTU EHS 206</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #e6f2ff;
+      color: #033;
+    }
+    header {
+      background: #4da3ff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: white;
+      padding: 10px 5px;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      text-decoration: none;
+      color: #036;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    section {
+      padding: 15px;
+      margin: 10px;
+      background: white;
+      border-radius: 12px;
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #024;
+    }
+    .card {
+      background: #f5fbff;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      color: #555;
+    }
+    .tag {
+      display: inline-block;
+      background: #4da3ff;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ACTU EHS 206</h1>
+  <p>Santé, Sécurité & Environnement – Magasin / Terrain</p>
+</header>
+
+<nav>
+  <a href="#incendie">🔥 Incendie</a>
+  <a href="#echauffement">💪 Échauffement</a>
+  <a href="#epi">🦺 EPI</a>
+  <a href="#environnement">🌍 Environnement</a>
+</nav>
+
+<section id="incendie">
+  <h2>🔥 Incendie & Évacuation</h2>
+  <div class="card">
+    <span class="tag">Magasin</span>
+    Respect des consignes incendie, dégagement des issues de secours, pas d’obstacles devant les extincteurs.
+  </div>
+  <div class="card">
+    <span class="tag">Terrain</span>
+    Participer aux exercices d’évacuation, connaître le point de rassemblement.
+  </div>
+  <p>🎥 Vidéo utile :  
+    <a href="https://www.youtube.com/results?search_query=exercice+evacuation+incendie+entreprise" target="_blank">
+      Voir sur YouTube
+    </a>
+  </p>
+</section>
+
+<section id="echauffement">
+  <h2>💪 Échauffements du matin</h2>
+  <div class="card">
+    <span class="tag">Magasin</span>
+    Prévenir les TMS (dos, épaules, poignets) avant la prise de poste.
+  </div>
+  <div class="card">
+    <span class="tag">Terrain</span>
+    Exercices courts avant manutention ou port de charges.
+  </div>
+  <p>🎥 Vidéo utile :  
+    <a href="https://www.youtube.com/results?search_query=echauffement+travail+manutention" target="_blank">
+      Voir sur YouTube
+    </a>
+  </p>
+</section>
+
+<section id="epi">
+  <h2>🦺 Port des EPI</h2>
+  <div class="card">
+    <span class="tag">Magasin</span>
+    Porter les équipements requis selon les zones (gants, chaussures de sécurité si besoin).
+  </div>
+  <div class="card">
+    <span class="tag">Terrain</span>
+    EPI obligatoires : gants, chaussures, gilet haute visibilité selon activité.
+  </div>
+</section>
+
+<section id="environnement">
+  <h2>🌍 Environnement & Énergie</h2>
+  <div class="card">
+    <span class="tag">Environnement</span>
+    Tri des déchets, réduction du plastique, respect des procédures de recyclage.
+  </div>
+  <div class="card">
+    <span class="tag">Énergie</span>
+    Éteindre les lumières inutiles, limiter l’usage des appareils non nécessaires.
+  </div>
+</section>
+
+<footer>
+  ACTU EHS 206 – Site d’information Santé Sécurité Environnement  
+  <br>Créé pour usage interne magasin / terrain
+</footer>
+
+</body>
+</html>
