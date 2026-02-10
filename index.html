@@ -33,7 +33,7 @@
     }
     .btn.secondary { background: #0077b6; }
     .btn.call { background: #28a745; }
-    .btn.sms { background: #ff9800; }
+    .btn.sms { background: #f59e0b; }
     .section {
       background: white;
       margin: 20px auto;
@@ -47,18 +47,18 @@
       height: 215px;
       border-radius: 10px;
     }
-    .hidden { display: none; }
-    footer {
-      margin: 30px 0;
-      font-size: 14px;
-    }
     input {
       width: 100%;
-      padding: 12px;
+      padding: 10px;
       border-radius: 8px;
       border: 1px solid #ccc;
       margin-top: 10px;
       font-size: 16px;
+    }
+    .hidden { display: none; }
+    footer {
+      margin: 30px 0;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -92,6 +92,13 @@
 
   <div class="section">
     <h2>🤸 Échauffement du matin</h2>
+    <ul>
+      <li>Réduit le risque de blessures et d’accidents de travail</li>
+      <li>Prépare le corps à l’effort physique de la journée</li>
+      <li>Diminue les douleurs musculaires et articulaires</li>
+      <li>Améliore la concentration et l’énergie dès le début de poste</li>
+    </ul>
+    <p><strong>🎥 WARM UP 206 avec tes collègues :</strong></p>
     <iframe src="https://www.youtube.com/embed/videoseries?list=PLgXO7P13pgPVHT4Twm96aKBVvkN5abMkX" allowfullscreen></iframe>
   </div>
 
@@ -99,23 +106,33 @@
     <h2>🧍 Gestes & Postures</h2>
     <iframe src="https://www.youtube.com/embed/4hE3gMf88V4" allowfullscreen></iframe>
   </div>
+
+  <div class="section">
+    <h2>🌍 Environnement & RSE</h2>
+    <ul>
+      <li>Tri des déchets et réduction du gaspillage</li>
+      <li>Économies d’énergie</li>
+      <li>Respect des procédures environnementales</li>
+    </ul>
+    <h3>♻️ Durabilité & Circularité</h3>
+    <p>La durabilité vise à réduire l’impact environnemental des vêtements sur toute leur durée de vie.</p>
+    <p>La circularité consiste à réutiliser, réparer et recycler les vêtements.</p>
+  </div>
 </div>
 
 <div class="container hidden" id="visiteur">
   <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
   <div class="section">
-    <h2>🛡️ Consignes générales – Visiteurs & Intervenants</h2>
+    <h2>🛡️ Consignes générales – Intervenants externes</h2>
     <ul>
       <li>Se présenter à l’accueil avant toute intervention</li>
       <li>Port des EPI obligatoires</li>
-      <li>Respecter les consignes du personnel Primark</li>
-      <li>Ne pas accéder aux zones interdites</li>
-      <li>Signaler toute situation dangereuse</li>
-      <li><strong>❌ Interdiction d’utiliser une échelle type A</strong></li>
-      <li><strong>✅ Utilisation obligatoire d’une PIRL</strong></li>
-      <li><strong>📻 Intervention sur le toit : radio obligatoire à récupérer à la sécurité</strong></li>
-      <li><strong>🪪 Badge visiteur obligatoire pour accéder aux locaux</strong></li>
+      <li>❌ Échelle type A interdite</li>
+      <li>✅ Utilisation obligatoire d’une PIRL</li>
+      <li>📻 Intervention sur le toit : radio obligatoire à récupérer à la sécurité</li>
+      <li>🪪 Port du badge visiteur obligatoire</li>
+      <li><strong>🚭 Interdiction de fumer ou vapoter dans les locaux</strong></li>
     </ul>
   </div>
 
@@ -132,9 +149,10 @@
   </div>
 
   <div class="section">
-    <h2>✅ Validation de la prise en compte des consignes (Intervenants externes)</h2>
-    <input type="text" id="entreprise" placeholder="Nom de l’entreprise (obligatoire)">
-    <a class="btn sms" href="#" onclick="sendSMS()">📩 J’ai lu et compris les consignes</a>
+    <h2>✅ Validation de la prise en compte des consignes</h2>
+    <p>Nom de l’entreprise :</p>
+    <input type="text" id="company" placeholder="Nom de l’entreprise" required>
+    <a class="btn sms" href="#" onclick="sendSMS()">📩 J’ai lu les consignes (SMS)</a>
   </div>
 </div>
 
@@ -151,17 +169,12 @@
   }
 
   function sendSMS() {
-    var entreprise = document.getElementById("entreprise").value.trim();
-    if (!entreprise) {
+    var company = document.getElementById("company").value;
+    if (!company) {
       alert("Merci de renseigner le nom de l’entreprise.");
       return;
     }
-
-    var message = encodeURIComponent(
-      "Bonjour, l’entreprise " + entreprise + 
-      " confirme avoir pris connaissance des consignes de sécurité EHS 206 Primark."
-    );
-
+    var message = encodeURIComponent("Entreprise : " + company + " - Confirmation de la bonne prise en compte des consignes de sécurité EHS 206.");
     window.location.href = "sms:+33633669863?body=" + message;
   }
 </script>
