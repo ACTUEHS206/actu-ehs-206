@@ -33,7 +33,6 @@
     }
     .btn.secondary { background: #0077b6; }
     .btn.call { background: #28a745; }
-    .btn.sms { background: #f59e0b; }
     .section {
       background: white;
       margin: 20px auto;
@@ -41,14 +40,6 @@
       border-radius: 12px;
       max-width: 800px;
       text-align: left;
-    }
-    input {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 16px;
     }
     iframe {
       width: 100%;
@@ -121,17 +112,8 @@
     </ul>
 
     <h3>♻️ Durabilité & Circularité des vêtements</h3>
-    <p><strong>La durabilité</strong> consiste à concevoir et utiliser des vêtements qui durent plus longtemps, 
-    avec moins d’impact sur l’environnement.</p>
-
-    <p><strong>La circularité</strong> signifie que les vêtements sont réutilisés, réparés ou recyclés.</p>
-
-    <ul>
-      <li>Favoriser la réparation</li>
-      <li>Encourager le recyclage textile</li>
-      <li>Limiter le gaspillage</li>
-      <li>Participer à une mode plus responsable</li>
-    </ul>
+    <p><strong>La durabilité</strong> consiste à concevoir et utiliser des vêtements qui durent plus longtemps, avec moins d’impact environnemental.</p>
+    <p><strong>La circularité</strong> permet de prolonger la vie des vêtements (réutilisation, réparation, recyclage).</p>
   </div>
 
   <div class="section">
@@ -147,10 +129,14 @@
     <h2>🛡️ Consignes générales – Visiteurs & Intervenants</h2>
     <ul>
       <li>Se présenter à l’accueil avant toute intervention</li>
-      <li>Porter les EPI obligatoires</li>
+      <li>Port des EPI obligatoires</li>
       <li>Respecter les consignes du personnel Primark</li>
       <li>Ne pas accéder aux zones interdites</li>
       <li>Signaler toute situation dangereuse</li>
+      <li><strong>❌ Interdiction d’utiliser une échelle type A</strong></li>
+      <li><strong>✅ Utilisation obligatoire d’une PIRL</strong></li>
+      <li><strong>📻 Intervention sur le toit : radio obligatoire à récupérer auprès de la sécurité</strong></li>
+      <li><strong>🪪 Port du badge visiteur obligatoire pour accéder aux locaux et travailler</strong></li>
     </ul>
   </div>
 
@@ -162,16 +148,9 @@
       <li>Ne pas utiliser les ascenseurs</li>
       <li>Ne pas retourner aux vestiaires chercher des affaires personnelles</li>
       <li>Se diriger au point de rassemblement afin de faire l’appel</li>
-      <li>Si besoin, en cas d'urgence ou de danger :</li>
+      <li>En cas d’urgence ou de danger :</li>
     </ul>
     <a class="btn call" href="tel:+33633669863">📞 Appeler le 06 33 66 98 63</a>
-  </div>
-
-  <div class="section">
-    <h2>✅ Confirmation de lecture des consignes</h2>
-    <p>Merci d’indiquer le nom de votre entreprise avant de confirmer :</p>
-    <input type="text" id="entreprise" placeholder="Nom de l’entreprise" required>
-    <a href="#" class="btn sms" onclick="envoyerSMS()">📩 J’ai lu les consignes</a>
   </div>
 </div>
 
@@ -185,16 +164,6 @@
     document.getElementById('collaborateur').classList.add('hidden');
     document.getElementById('visiteur').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
-  }
-
-  function envoyerSMS() {
-    var entreprise = document.getElementById("entreprise").value.trim();
-    if (entreprise === "") {
-      alert("Merci de renseigner le nom de votre entreprise avant l’envoi.");
-      return;
-    }
-    var message = encodeURIComponent("Bonjour, l’entreprise " + entreprise + " confirme avoir lu et pris connaissance des consignes sécurité EHS 206 Primark.");
-    window.location.href = "sms:+33633669863?body=" + message;
   }
 </script>
 
