@@ -169,3 +169,27 @@
 
 </body>
 </html>
+  <div class="section">
+    <h2>✅ Validation de la prise en compte des consignes</h2>
+    <p>Merci de confirmer que vous avez bien lu et compris les consignes de sécurité avant toute intervention.</p>
+
+    <label for="entreprise"><strong>Nom de l’entreprise :</strong></label><br>
+    <input 
+      type="text" 
+      id="entreprise" 
+      placeholder="Ex : Société ABC" 
+      required 
+      style="padding:10px; width:90%; max-width:400px; margin:10px 0; border-radius:8px; border:1px solid #ccc;"
+    >
+
+    <br>
+
+    <a 
+      id="smsLink" 
+      class="btn" 
+      href="#" 
+      onclick="sendSMS(); return false;"
+    >
+      📩 J’ai lu les consignes – Envoyer la validation par SMS
+    </a>
+  </div>
