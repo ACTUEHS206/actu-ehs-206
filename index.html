@@ -217,7 +217,10 @@
       📧 J’ai lu les consignes – Confirmer par mail
     </a>
   </div>
-</div>
+</<div class="container hidden" id="interimaire">
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
+
+
 
 <footer>
   <p>© EHS 206 – Primark</p>
@@ -228,6 +231,7 @@
     document.getElementById('home').classList.add('hidden');
     document.getElementById('collaborateur').classList.add('hidden');
     document.getElementById('visiteur').classList.add('hidden');
+    document.getElementById('interimaire').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
   }
 </script>
