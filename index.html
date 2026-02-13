@@ -63,9 +63,10 @@
 
 <div class="container" id="home">
   <a href="#" class="btn" onclick="showSection('collaborateur')">Je suis un collaborateur Primark</a>
+  <a href="#" class="btn" onclick="showSection('interimaire')">Je suis un intérimaire</a>
   <a href="#" class="btn secondary" onclick="showSection('visiteur')">Je suis un intervenant externe ou un visiteur</a>
-
 </div>
+
 
 <div class="container hidden" id="collaborateur">
   <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
@@ -176,6 +177,49 @@
   </div>
 </div>
 
+<div class="container hidden" id="interimaire">
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
+
+  <div class="section">
+    <h2>🛡️ Consignes magasin – Intérimaires</h2>
+    <ul>
+      <li>Se présenter à l’accueil à l’arrivée sur site</li>
+     <li>❌ Interdiction de fumer ou vapoter dans les locaux</li>
+      <li>Respecter les consignes du personnel Primark</li>
+      <li>Ne pas accéder aux zones interdites</li>
+      <li>Respecter les clients et rester courtois</li>
+      <li>Signaler immédiatement toute situation dangereuse</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔥 Consignes d’évacuation</h2>
+    <ul>
+      <li>Au retentissement de l’alarme, évacuer immédiatement</li>
+      <li>Se diriger vers l’issue de secours la plus proche</li>
+      <li>Ne pas utiliser les ascenseurs</li>
+      <li>Ne pas retourner chercher ses affaires</li>
+      <li>Se diriger vers le point de rassemblement pour comptage</li>
+    </ul>
+
+    <a class="btn" 
+       style="background:#2e7d32;" 
+       target="_blank"
+       href="https://maps.app.goo.gl/iLMBJoxC8VVTJXos6?g_st=ic">
+      🟢 Cliquez ici pour te rendre au point de rassemblement Primark
+    </a>
+  </div>
+
+  <div class="section">
+    <h2>✅ Validation de la prise en compte des consignes</h2>
+    <p>Merci de confirmer que vous avez bien pris connaissance des consignes avant de débuter votre mission.</p>
+    <a class="btn" 
+       href="mailto:ehs206@primark.fr?subject=Validation%20consignes%20int%C3%A9rimaire&body=Bonjour%2C%0A%0AJe%20confirme%20avoir%20pris%20connaissance%20et%20compris%20l%E2%80%99ensemble%20des%20consignes%20de%20s%C3%A9curit%C3%A9%20du%20site%20Primark%20206.%0A%0ANom%20de%20l%E2%80%99agence%20d%E2%80%99int%C3%A9rim%20:%20%0A%0ANom%20de%20l%E2%80%99int%C3%A9rimaire%20:%20%0A%0ADate%20:%20%0A%0AMerci.%0A">
+      📧 J’ai lu les consignes – Confirmer par mail
+    </a>
+  </div>
+</div>
+
 <div class="container hidden" id="visiteur">
   <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
@@ -231,6 +275,7 @@
     document.getElementById('home').classList.add('hidden');
     document.getElementById('collaborateur').classList.add('hidden');
     document.getElementById('visiteur').classList.add('hidden');
+    document.getElementById('interimaire').classList.add('hidden');
     document.getElementById(id).classList.remove('hidden');
   }
 </script>
