@@ -67,9 +67,8 @@
   <a href="#" class="btn secondary" onclick="showSection('visiteur')">Je suis un visiteur ou un intervenant externe</a>
 </div>
 
-<a href="javascript:void(0)" class="btn secondary" onclick="showSection('home')">
-  ⬅ Retour accueil
-</a>
+<div class="container hidden" id="collaborateur">
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
   <div class="section">
     <h2>🔥 Incendie – Consignes d’évacuation</h2>
@@ -114,57 +113,97 @@
     <h2>🌍 Environnement & RSE</h2>
     <ul>
       <li>Tri des déchets le matin lors du traitement de marchandises, mais aussi en caisses</li>
+    
       <li>Utilisation d'éponges en cellulose végétale a la cantine</li>
+      
       <li>Tri des dechets emballage et alimentaire à la salle de pause</li>
+      
       <li>Chaque collaborateur est acteur et responsable de la démarche environnementale</li>
-      <li>Économies d'energie, champion de l'énergie :Yassine Manager</li>
+      
+       <li>Économies d'energie, champion de l'énergie :Yassine Manager</li>
+      
     </ul>
     <h3>♻️ Durabilité & Circularité des vêtements</h3>
     <p><strong>Durabilité :</strong> concevoir et utiliser des vêtements qui durent plus longtemps.</p>
     <p><strong>Circularité :</strong> réutilisation, réparation et recyclage des vêtements.</p>
   </div>
 
-  <p style="font-weight:700; font-size:18px; margin-bottom:6px; color:#0a2540; text-align:center;">
-    Infos environnementales (AGEC)
-  </p>
+<p style="font-weight:700; font-size:18px; margin-bottom:6px; color:#0a2540; text-align:center;">
+  Infos environnementales (AGEC)
+</p>
 
-  <p style="font-size:14px; margin-bottom:12px; color:#0a2540; text-align:center;">
-    Cliquez ci-dessous pour accéder aux informations
-  </p>
+<p style="font-size:14px; margin-bottom:12px; color:#0a2540; text-align:center;">
+  Cliquez ci-dessous pour accéder aux informations
+</p>
 
-  <div style="text-align:center;">
-    <a href="https://www.primark.com/fr-fr/informations-produit?utm_source=qrcode&utm_medium=store&utm_campaign=agec" target="_blank">
-      <span style="display:inline-flex;align-items:center;justify-content:center;width:110px;height:110px;border-radius:50%;background: radial-gradient(circle at top, #66bb6a, #1b5e20);color:#ffffff;font-size:56px;border: 4px solid #ffffff;box-shadow: 0 12px 26px rgba(0,0,0,0.35),0 0 0 6px rgba(67,160,71,0.25);">
-        ♻️
-      </span>
-    </a>
+<div style="text-align:center;">
+  <a 
+    href="https://www.primark.com/fr-fr/informations-produit?utm_source=qrcode&utm_medium=store&utm_campaign=agec" 
+    target="_blank"
+    aria-label="Cliquer pour accéder aux informations environnementales du produit (AGEC)"
+    title="Accéder aux informations environnementales de nos produits (LOI AGEC)"
+    style="text-decoration:none;"
+  >
+    <span 
+      style="
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        width:110px;
+        height:110px;
+        border-radius:50%;
+        background: radial-gradient(circle at top, #66bb6a, #1b5e20);
+        color:#ffffff;
+        font-size:56px;
+        border: 4px solid #ffffff;
+        box-shadow: 
+          0 12px 26px rgba(0,0,0,0.35),
+          0 0 0 6px rgba(67,160,71,0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+      "
+      onmouseover="this.style.transform='scale(1.15)'; this.style.boxShadow='0 16px 32px rgba(0,0,0,0.45), 0 0 0 8px rgba(67,160,71,0.35)'"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 26px rgba(0,0,0,0.35), 0 0 0 6px rgba(67,160,71,0.25)'"
+    >
+      ♻️
+    </span>
+  </a>
+</div>
+
+ <div class="section">
+ <div style="max-width:800px;margin:auto;padding:20px;font-family:Arial,sans-serif;">
+
+  <h2 style="color:#0f3d57;">Travail sécuritaire – hauteur palette</h2>
+
+  <ul style="font-size:16px;line-height:1.6;">
+    <li>Hauteur de palette : le bas du dernier carton à 1,52 m</li>
+    <li>Chaque étiquette de carton vers l’extérieur afin d’avoir une identification sécuritaire</li>
+    <li>Chaque palette doit être filmée avant d’être déplacée</li>
+    <li>Porter des chaussures de sécurité ou coques avant d’utiliser un tire-palette</li>
+  </ul>
+
+  <div style="position:relative;padding-bottom:177.77%;height:0;overflow:hidden;max-width:400px;margin:30px auto;">
+    <iframe 
+      src="https://www.youtube.com/embed/XtBOVie9kTI"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
 
-  <div class="section">
-    <div style="max-width:800px;margin:auto;padding:20px;font-family:Arial,sans-serif;">
-      <h2 style="color:#0f3d57;">Travail sécuritaire – hauteur palette</h2>
-      <ul style="font-size:16px;line-height:1.6;">
-        <li>Hauteur de palette : le bas du dernier carton à 1,52 m</li>
-        <li>Chaque étiquette de carton vers l’extérieur afin d’avoir une identification sécuritaire</li>
-        <li>Chaque palette doit être filmée avant d’être déplacée</li>
-        <li>Porter des chaussures de sécurité ou coques avant d’utiliser un tire-palette</li>
-      </ul>
-      <div style="position:relative;padding-bottom:177.77%;height:0;overflow:hidden;max-width:400px;margin:30px auto;">
-        <iframe src="https://www.youtube.com/embed/XtBOVie9kTI" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-
+</div>
+  
   <div class="section">
     <h2>💡 Remontée EHS</h2>
     <a class="btn" href="mailto:ehs206@primark.fr">📧 Envoyer une remontée EHS</a>
   </div>
 </div>
 
-<a href="javascript:void(0)" class="btn secondary" onclick="showSection('home')">
-  ⬅ Retour accueil
-</a>
-    <div class="section">
+
+ <div class="container hidden" id="interimaire">
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
+
+  <div class="section">
     <h2>🛡️ Consignes magasin – Intérimaires</h2>
     <ul>
      <li>❌ Interdiction de fumer ou vapoter dans les locaux</li>
@@ -211,10 +250,9 @@
   </div>
 </div>
 
+<div class="container hidden" id="visiteur">
+  <a href="#" class="btn secondary" onclick="showSection('home')">⬅ Retour accueil</a>
 
-<a href="javascript:void(0)" class="btn secondary" onclick="showSection('home')">
-  ⬅ Retour accueil
-</a>
   <div class="section">
     <h2>🛡️ Consignes générales – Intervenants externes</h2>
     <ul>
@@ -256,7 +294,6 @@
 
 
 
-</div>
 
 <footer>
   <p>© EHS 206 – Primark</p>
