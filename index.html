@@ -313,11 +313,17 @@
 
 <script>
   function showSection(id) {
-    document.getElementById('home').classList.add('hidden');
-    document.getElementById('collaborateur').classList.add('hidden');
-    document.getElementById('visiteur').classList.add('hidden');
-    document.getElementById('interimaire').classList.add('hidden');
-    document.getElementById(id).classList.remove('hidden');
+    const sections = ['home', 'collaborateur', 'interimaire', 'visiteur'];
+
+    sections.forEach(sectionId => {
+      const el = document.getElementById(sectionId);
+      if (el) el.classList.add('hidden');
+    });
+
+    const target = document.getElementById(id);
+    if (target) target.classList.remove('hidden');
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
 
