@@ -371,6 +371,100 @@
 
 </div> <!-- ✅ FIN du container VISITEUR -->
 
+<div class="container hidden" id="travauxNuit">
+
+  <a href="#" class="btn" onclick="showSection('home'); return false;">
+    ⬅ Retour à l'accueil
+  </a>
+
+  <div class="section">
+    <h2>🌙 Passation des travaux de nuit</h2>
+
+    <p>
+      Formulaire de suivi des interventions réalisées
+      par les entreprises extérieures au sein du magasin Primark 206.
+    </p>
+
+    <form id="formPassationNuit"
+      onsubmit="envoyerPassationNuit(event)">
+
+      <h3>1. Identification de l'intervention</h3>
+
+      <label>Entreprise intervenante</label>
+      <input type="text" id="entrepriseNuit" required
+        style="width:100%;padding:12px;margin:8px 0 15px;">
+
+      <label>Nom de l'intervenant / responsable</label>
+      <input type="text" id="intervenantNuit" required
+        style="width:100%;padding:12px;margin:8px 0 15px;">
+
+      <label>Date de l'intervention</label>
+      <input type="date" id="dateNuit" required
+        style="width:100%;padding:12px;margin:8px 0 15px;">
+
+      <label>Horaires d'intervention</label>
+      <input type="text" id="horairesNuit"
+        placeholder="Exemple : 21h00 - 05h00" required
+        style="width:100%;padding:12px;margin:8px 0 15px;">
+
+      <h3>2. Travaux réalisés</h3>
+
+      <textarea id="travauxRealises" required
+        placeholder="Décrire les travaux effectués..."
+        style="width:100%;min-height:90px;padding:12px;margin:8px 0 15px;"></textarea>
+
+      <h3>3. Sécurité et contrôles</h3>
+
+      <label>Registre de sécurité</label>
+      <select id="registreNuit" required
+        style="width:100%;padding:12px;margin:8px 0 15px;">
+        <option value="">Sélectionner</option>
+        <option>Vérifié et renseigné</option>
+        <option>Non renseigné</option>
+        <option>Non concerné</option>
+      </select>
+
+      <label>SSI – État / vérification</label>
+      <textarea id="ssiNuit"
+        placeholder="Préciser les vérifications et éventuelles anomalies..."
+        style="width:100%;min-height:75px;padding:12px;margin:8px 0 15px;"></textarea>
+
+      <label>Groupes de climatisation – Réarmement et vérification</label>
+      <textarea id="climNuit"
+        placeholder="Préciser les groupes réarmés et vérifiés..."
+        style="width:100%;min-height:75px;padding:12px;margin:8px 0 15px;"></textarea>
+
+      <h3>4. Anomalies et travaux restants</h3>
+
+      <textarea id="problemesNuit"
+        placeholder="Problèmes rencontrés ou anomalies constatées..."
+        style="width:100%;min-height:75px;padding:12px;margin:8px 0 15px;"></textarea>
+
+      <textarea id="travauxRestants"
+        placeholder="Travaux restant à effectuer..."
+        style="width:100%;min-height:75px;padding:12px;margin:8px 0 15px;"></textarea>
+
+      <label>Consignes pour l'équipe suivante</label>
+      <textarea id="consignesNuit"
+        placeholder="Informations importantes pour la reprise..."
+        style="width:100%;min-height:90px;padding:12px;margin:8px 0 15px;"></textarea>
+
+      <p style="margin-top:20px;">
+        <label>
+          <input type="checkbox" id="validationNuit" required>
+          Je confirme l'exactitude des informations transmises.
+        </label>
+      </p>
+
+      <button type="submit" class="btn"
+        style="border:none;width:100%;cursor:pointer;">
+        📧 Envoyer la passation à l'EHS
+      </button>
+
+    </form>
+  </div>
+</div>
+
 <footer>
   <p>© EHS 206 – Primark</p>
   <p style="font-size:12px; opacity:0.85; max-width:900px; margin:10px auto;">
@@ -379,10 +473,16 @@
     Les liens vers des services tiers (YouTube, Google Maps, site Primark) peuvent déposer des cookies ou collecter des données selon leurs propres politiques de confidentialité.
   </p>
 </footer>
+
 <script>
   function showSection(id) {
-    const sections = ['home', 'collaborateur', 'interimaire', 'visiteur'];
-
+    const sections = [
+  'home',
+  'collaborateur',
+  'interimaire',
+  'visiteur',
+  'travauxNuit'
+];
     sections.forEach(sectionId => {
       const el = document.getElementById(sectionId);
       if (el) el.classList.add('hidden');
@@ -393,6 +493,44 @@
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+  
+function envoyerPassationNuit(event) {
+  event.preventDefault();
+
+  const champs = [
+    ['Entreprise', 'entrepriseNuit'],
+    ['Intervenant', 'intervenantNuit'],
+    ['Date', 'dateNuit'],
+    ['Horaires', 'horairesNuit'],
+    ['Travaux réalisés', 'travauxRealises'],
+    ['Registre de sécurité', 'registreNuit'],
+    ['SSI', 'ssiNuit'],
+    ['Groupes climatisation', 'climNuit'],
+    ['Problèmes / anomalies', 'problemesNuit'],
+    ['Travaux restants', 'travauxRestants'],
+    ['Consignes', 'consignesNuit']
+  ];
+
+  let corps = 'Bonjour,\n\nPASSATION TRAVAUX DE NUIT - PRIMARK 206\n\n';
+
+  champs.forEach(([titre, id]) => {
+    corps += titre + ' :\n';
+    corps += document.getElementById(id).value + '\n\n';
+  });
+
+  corps += 'Validation : Informations confirmées.\n';
+
+  const sujet = encodeURIComponent(
+    'Passation travaux de nuit - Primark 206'
+  );
+
+  const message = encodeURIComponent(corps);
+
+  window.location.href =
+    'mailto:ehs206@primark.fr?subject=' +
+    sujet + '&body=' + message;
+}
+
 </script>
 
 </body>
